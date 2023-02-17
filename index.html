@@ -1,104 +1,446 @@
 <!DOCTYPE html>
+
+
 <html lang="en">
   <head>
+   
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="o_bLogo.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Allen's Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cards.css">
+    <meta name="viewport" content="width=device-width, initial-scale=4.0" />
+    <title>Merciful Bolaji</title>
+
+
+    <div id="loading-screen">
+      <img id="loading-image" src="o_bLogo.svg" alt="Loading">
+      <div id="loading-bar"></div>
+      <p style="color:333; font-size:2rem; margin-top: 1rem">Loading...</p>
+    
+  </div>
+  
   </head>
+
+  <div id="navbar">
+    
+    <a href="" onclick="window.location.reload(true)" id="logo"> <img src="o_bLogo.svg" alt="Merciful's Logo" style="width:35;height:35px; margin-left: 5px; margin-top: 3px"></a> <h2 style= "line-height: 2.1rem; color: white; font-size: 2.1rem; margin-left: 60px; margin-bottom: -40px; margin-top: 10px;">Merciful Bolaji </h2>
+    <div id="navbar-right">
+    
+      <a href="#Extracurriculars">🎒 Extracurriculars</a>
+      <a href="#Projects">👩🏽‍🚀 Projects</a>
+      <a href="#WorkExperience">💼 Work Experience</a>
+      <a href="#Accomplishments">🏆 Accomplishements</a>
+      <a href="#Skills">🛠️ Skills</a>
+      <a href="#Contact">✉️ Contact</a>
+      <label class="toggle">
+        <span class="onoff"></span>
+        <input type="checkbox" />
+        <span class="slider round "></span>
+      </label>
+    </div>
+
+  </div>
+  
   <body>
-
-    <canvas id="bg"></canvas>   
-
+    
+    <canvas id="bg"></canvas>
     <main>
-
       <header>
-        <h1>Allen Yuan</h1>
-        <p>🚀 Welcome to mercy's website!</p>
+        <h1>Merciful Bolaji</h1>
+        <div class="typewrite" data-period="2000" style="font-family:'Courier New', monospace" data-type='[ "I am a Programmer.", "I am an Artist.", "I am a Leader.", "I am an Eager Learner.", "I Love to Create." ]'>
+          <span class="wrap"></span><span class="cursor">|</span>
+        </div>        
+        <p>🚀 Welcome to my website! 👋</p>
       </header>
 
+    <div class="nobg">
+        <img id=boylaptop src="./public/boylaptop.svg" alt="Boy astronaut using laptop" width="500" height="400">
+    </div>
 
-      <blockquote>
-        <p>I like making stuff and putting it on the internet</p>
-      </blockquote>
-
+    <blockquote>
+          
+    </blockquote>
       <section>
-        <h2>📜 Manifesto</h2>
+        <h2 id ="Extracurriculars">🎒 Extra-Curricular Activities </h2>
+        <h3>🧪 <a href="https://www.chingsadc.org/" target="_blank">SciTech Activity Committee</a> Lead | 2021 - 2022</h3>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          Wolfhacks is a student-led non-profit hackathon that promotes STEM education through hands-on workshops and challenges. I worked as a lead on the executive team to organize the event and contact sponsors. I also managed a team to plan and run the Technology division of STEAMWORKS. STEAMWORKS is an annual school event at Chinguacousy with STEAM workshops and activities for junior students.
         </p>
-
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-
+        <h3>🎤 Delegate of the Model United Nations Team | 2021</h3>
+        <li>  Discussed and debated current international political and social issues</li>
+        <li>  Investigated stances on global issues and past endeavours to solve them</li>
+        <li>  Developed innovative solutions to persistent international conflicts</li>
+        
+        <h3>🏫 MIT Scratch Team Interview | 2020</h3>
+        <li>  Explained my use of art and coding to inspire social change on Scratch</li>
+        <li>  Proposed new ideas to improve the Scratch programming software</li>
+        <li>  Created projects raising awareness on anti-bullying, racism, and mental health</li>
+        
+        <h3>💻 Student Coding Mentor | 2019</h3>
+        <li>  Demonstrated coding principles and application of them in software projects</li>
+        <li>  Taught students to program Micro:bit circuit boards with hardware extensions</li>
+        <li>  Encouraged creativity and provided valuable feedback</li>
       </section>
 
-      <section class="light">
-        <h2>👩🏽‍🚀 Projects</h2>
+      <section class="gal">
+        <div class="card">
+          <div class="card-bg">
+              <img src="./public/o2.png" alt="AI Brain Project">
+          </div>
+          <div class="card-context">
+              <div class="dark-bg"></div>
+              <h2>TumorTrack</h2>
+              <p>
+                Built an Artificial Intelligence Model that detects Brain Tumours.
+              </p>
+              <form action="https://docs.google.com/presentation/d/14u9JUIxyLjoJlWAykumoHIWBNxVqr0x4YLqzY57EpCM/edit?usp=sharing" target="_blank">
+                <button type="submit">Learn more</button>
+              </form>
+            </div>
+          <div class="card-icons">
+              <ul>
+                  <li>
+                      <i onclick="window.open('https://drive.google.com/file/d/18YDUUNfQOSN3yI_0h_1VialrVvvB9UqP/view?usp=sharing', '_blank');"> <img src="./public/vid-play.svg" alt="V" style="width:40px;height:40px;"></i>
+                  </li>
+                  <li>
+                    <i onclick="window.open('https://drive.google.com/file/d/18YDUUNfQOSN3yI_0h_1VialrVvvB9UqP/view?usp=sharing', '_blank');"> <img src="./public/vid-play.svg" alt="V" style="width:40px;height:40px;"></i>
+                </li>
+                <li>
+                  <i onclick="window.open('https://drive.google.com/file/d/18YDUUNfQOSN3yI_0h_1VialrVvvB9UqP/view?usp=sharing', '_blank');"> <img src="./public/vid-play.svg" alt="V" style="width:40px;height:40px;"></i>
+              </li>
+              </ul>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-bg">
+            <video id="HovVid" style="margin-top: -45px; margin-left: -70px" width="600px" height="450px" controls>
+              <source src="./public/Hover_Vid.mp4" type="video/mp4"> Your browser does not support the video tag.
+            </video>
+              <img src="./public/hovpic.PNG" alt="..." id="hov_Images">
 
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
+          </div>
+          <div class="card-context">
+              <div class="dark-bg"></div>
+              <h2>Electric Hovercraft</h2>
+              <p>
+                  Designing and building a functioning hovercraft using the SPICE engineering process.
+              </p>
+              <form action="https://drive.google.com/file/d/11ZiixHCyRtnd6nLZzZLkUuuwer0IV04q/view?usp=sharing" target="_blank">
+                <button type="submit">Learn more</button>
+              </form>
+            </div>
+          <div class="card-icons">
+              <ul>
+                  <li>
+                      <i class="bx bx-drink"></i>
+                  </li>
+                  <li>
+                      <i class="bx bx-store-alt"></i>
+                  </li>
+                  <li>
+                      <i class="bx bx-map"></i>
+                  </li>
+              </ul>
+          </div>
+      </div>
 
-        <h2>🏆 Accomplishments</h2>
+      <div class="card">
+        <div class="card-bg">
+            <img src="./public/microortho.png" alt="...">
+        </div>
+        <div class="card-context">
+            <div class="dark-bg"></div>
+            <h2>Opticle</h2>
+            <p>
+                Designing an environmentally-friendly optical microscope using CAD software.
+            </p>
+            <form action="https://docs.google.com/presentation/d/14u9JUIxyLjoJlWAykumoHIWBNxVqr0x4YLqzY57EpCM/edit?usp=sharing" target="_blank">
+              <button type="submit">Learn more</button>
+            </form>
+          </div>
+        <div class="card-icons">
+            <ul>
+                <li>
+                    <i onclick="window.open('https://drive.google.com/file/d/18YDUUNfQOSN3yI_0h_1VialrVvvB9UqP/view?usp=sharing', '_blank');"> <img src="./public/vid-play.svg" alt="V" style="width:40px;height:40px;"></i>
+                </li>
+                <li>
+                  <i onclick="window.open('https://drive.google.com/file/d/18YDUUNfQOSN3yI_0h_1VialrVvvB9UqP/view?usp=sharing', '_blank');"> <img src="./public/vid-play.svg" alt="V" style="width:40px;height:40px;"></i>
+              </li>
+              <li>
+                <i onclick="window.open('https://drive.google.com/file/d/18YDUUNfQOSN3yI_0h_1VialrVvvB9UqP/view?usp=sharing', '_blank');"> <img src="./public/vid-play.svg" alt="V" style="width:40px;height:40px;"></i>
+            </li>
+            </ul>
+        </div>
+      </div>
 
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
+      <div class="card">
+        <div class="card-bg">
+            <img src="./public/sp-game.PNG" alt="..." id="scratchImages">
+        </div>
+        <div class="card-context">
+            <div class="dark-bg"></div>
+            <h2>Scratch Games</h2>
+            <p>
+              I enjoy creating games, art and animations on Scratch. Check out my 50+ projects!
+            </p>
+            <form action="https://scratch.mit.edu/users/smartboy3/" target="_blank">
+              <button type="submit">Learn more</button>
+            </form>
+          </div>
+        <div class="card-icons">
+            <ul>
+                <li>
+                  <i onclick="window.open('https://scratch.mit.edu/projects/310746790/', '_blank');"> <img src="./public/planet-icon.svg" alt="Space Run" style="width:40px;height:40px;"></i>
+                </li>
+                <li>
+                  <i onclick="window.open('https://scratch.mit.edu/projects/717003471/', '_blank');"> <img src="./public/box-icon.png" alt="Microbit Sports: Boxing" style="width:40px;height:40px;"></i>
+                </li>
+                <li>
+                  <i onclick="window.open('https://scratch.mit.edu/projects/410696196/', '_blank');"> <img src="./public/palette-icon.svg" alt="2020 so far.." style="width:40px;height:40px;"></i>
+                </li>
+            </ul>
+        </div>
+      </div>
+  
 
-      </section>
+      <div class="card">
+        <div class="card-bg">
+            <img src="./public/traffic.png" alt="..." id="image">
+        </div>
+        <div class="card-context">
+            <div class="dark-bg"></div>
+            <h2>Arduino Traffic Lights</h2>
+            <p>
+              Programmed and designed a traffic light system using Arduino and Tinkercad software.
+            </p>
+            <form action="https://drive.google.com/file/d/1gdr1JTLIr6hxXsvh8yf_CrTfdqq9KSEf/view?usp=sharing" target="_blank">
+              <button type="submit">Learn more</button>
+            </form>
+          </div>
+        <div class="card-icons">
+            <ul>
+                <li onclick="window.location.href = 'https://ide.geeksforgeeks.org';">
+                </li>
+                <li>
+                  <i onclick="window.open('https://mercifulb.github.io/ProbabilityGame/', '_blank');"> <img src="./public/planet-icon.svg" alt="Probability Game" style="width:40px;height:40px;"></i>
+                </li>
+                <li>
+                  <i onclick="window.open('https://mercifulb.github.io/ProbabilityGame/', '_blank');"> <img src="./public/planet-icon.svg" alt="Probability Game" style="width:40px;height:40px;"></i>
+                </li>
+            </ul>
+        </div>
+      </div>
 
-      <blockquote>
-        <p>The best way out is always through <br>-Robert Frost</p>
-      </blockquote>
+      <div class="card">
+        <div class="card-bg">
+          <link href="dice.css" rel="stylesheet">
 
-      <section class="left">
-        <h2>🌮 Work History</h2>
+          <div class="dicecontainer">
+            <div class="dice" id="dice">
+              <div class="face front"></div>
+              <div class="face back"></div>
+              <div class="face top"></div>
+              <div class="face bottom"></div>
+              <div class="face right"></div>
+              <div class="face left"></div>
+            </div>
+          </div>
+        </div>
+        <div class="card-context">
+            <div class="dark-bg"></div>
+            <h2>Probability Simulation</h2>
+            <p>
+              Coded a randomized game based on a virtual dice and spinner for a probability analysis of various events.
+            </p>
+            <form action="https://drive.google.com/file/d/1e4GR2jAempIxAPYZKLSzvycgM5M03kbV/view?usp=sharing" target="_blank">
+              <button type="submit">Learn more</button>
+            </form>
+          </div>
+        <div class="card-icons">
+            <ul>
+              <li>
+                <i onclick="window.open('https://mercifulb.github.io/ProbabilityGame/', '_blank');"> <img src="./public/planet-icon.svg" alt="Probability Game" style="width:40px;height:40px;"></i>
+              </li>
+              <li>
+                <i onclick="window.open('https://mercifulb.github.io/ProbabilityGame/', '_blank');"> <img src="./public/planet-icon.svg" alt="Probability Game" style="width:40px;height:40px;"></i>
+              </li>
+              <li>
+                <i onclick="window.open('https://mercifulb.github.io/ProbabilityGame/', '_blank');"> <img src="./public/planet-icon.svg" alt="Probability Game" style="width:40px;height:40px;"></i>
+              </li>
+            </ul>
+        </div>
+      </div>
 
-        <h3>McDonalds</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-        <h3>Burger King</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-        <h3>Taco Bell</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
 
-      </section>
+      <div class="card">
+        <div class="card-bg">
+          <video id="HouseVid" style="margin-top: -45px" width="550px" height="450px" controls>
+            <source src="./public/House Tour.mp4" type="video/mp4"> Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="card-context">
+            <div class="dark-bg"></div>
+            <h2>Custom House Design</h2>
+            <p>
+              Designed a home for a client using architectural principles and Revit software.
+            </p>
+            <form action="https://drive.google.com/file/d/1gdr1JTLIr6hxXsvh8yf_CrTfdqq9KSEf/view?usp=sharing" target="_blank">
+              <button type="submit">Learn more</button>
+            </form>
+          </div>
+        <div class="card-icons">
+            <ul>
+                <li>
+                  <i onclick="document.getElementById('HouseVid').play()"> <img src="vid-play.svg" alt="V" style="width:40px;height:40px;"></i>
+                </li>
+                <li>
+                  <i onclick="window.open('https://mercifulb.github.io/ProbabilityGame/', '_blank');"> <img src="./public/planet-icon.svg" alt="Probability Game" style="width:40px;height:40px;"></i>
+                </li>
+                <li>
+                  <i onclick="window.open('https://mercifulb.github.io/ProbabilityGame/', '_blank');"> <img src="./public/planet-icon.svg" alt="Probability Game" style="width:40px;height:40px;"></i>
+                </li>
+            </ul>
+        </div>
+      </div>
 
-      <blockquote>
-        <p>Thanks for watching!</p>
-      </blockquote>
+      <div class="card">
+        <div class="card-bg">
+            <img src="./public/steamworks-laptop.jpg" alt="..." id="image">
+        </div>
+        <div class="card-context">
+            <div class="dark-bg"></div>
+            <h2 style="font-size: 25px;">STEAM Works Challenge</h2>
+            <p>
+              Created an engaging apocalyptic themed programming challenge for participants of our school STEAM event.
+            </p>
+            <form action="https://drive.google.com/file/d/1bUui7mRMcQrY5xdwQ752Jgyo9iAdYCna/view?usp=sharing" target="_blank">
+              <button type="submit">Learn more</button>
+            </form>
+          </div>
+        <div class="card-icons">
+            <ul>
+              <li>
+                <i onclick="window.open('https://drive.google.com/file/d/1PGjchNFtyB4n5pulVksJniRI5CnnPdt2/view?usp=sharing', '_blank');"> <img src="./public/vid-play.svg" alt="V" style="width:40px;height:40px;"></i>
+            </li>
+                <li>
+                  <i onclick="window.open('https://drive.google.com/file/d/1uKVr36G3RmPzVBMi2xTmibw3RVAKlkPZ/view?usp=sharing', '_blank');"> <img src="./public/book-icon.svg" alt="Probability Game" style="width:40px;height:40px;"></i>
+                </li>
+                <li>
+                  <i onclick="window.open('https://replit.com/@MB10ZZ695721/STEAM-Night-Tech-Answer#main.py', '_blank');"> <img src="./public/code-icon.svg" alt="Probability Game" style="width:40px;height:40px;"></i>
+                </li>
+            </ul>
+        </div>
+      </div>
 
-
-    </main>
+     
+  
+    </section>
     
-    <script type="module" src="/main.js"></script>
+      <section class="light">
+        <h2 id ="Projects">👩🏽‍🚀 My Projects</h2>
 
+        <p>
+          These projects have taught me how to think critically and make effective design choices.
+        </p>
+        
+        <iframe style="display: none;" onload="this.style.display='block';" src="https://trinket.io/embed/python/fd216d7cb8?runOption=run" width="80%" height="450" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+        <p>
+          Using Python Turtle Graphics the function draws a realistic tree randomizing the length and depth of branches, the angles of the branches, and changing the colours of the leaves. My code incorporates variable manipulation with different data types, conditional statements, loops, and methods from the Random Python package.        </p>
 
+      </section>
 
+      <section class="lleft">
+        <h2 id ="WorkExperience">💼 Work Experience</h2>
 
+        <h3>🖥️ Student Coding Camp Leader | July 2022</h3>
+        <li> Assisted supervisor with the implementation of coding lessons for participants </li>
+        <li> Encouraged participants to engage in creative and efficient coding practice </li>
+        <li> Challenged participants to read/write Microbit and Scratch code </li>
+        <li> Debugged code and suggested improvements using appropriate terminology</li>
+        <li> Provided consistent constructive feedback on participants' projects </li>
+        <br>
+        <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQSDXWoPPnHpuuaYTsanxN3pOx5lUffLRQLBixj727ki_ZuZi49r1OVjH3XHUuLgfk23grMe9CtRn4A/embed?start=false&loop=false&delayms=3000" frameborder="0" width="600" height="375" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>        
+        <h3>🎨 Freelance Illustrator | June 2020 - Present</h3>
+        <li> Worked with global clients to create captivating digital and graphite illustrations</li>
+        <li> Developed communication, professionalism, negotiation, and creativity</li>
+        <li> Maintained a 5-Star review by delivering results that exceed expectations  </li>
+        
+        <div class="art_image art_image_1">
+          <img src="./public/art1.svg" class="img" alt="Epic Tiger Drawing">
+        </div>
+        <div class="art_image art_image_2">
+          <img src="./public/art2.svg" class="img" alt="Epic Man Drawing">
+        </div>
+        <div class="art_image art_image_3">
+          <img src="./public/art3.svg" class="img" alt="Epic Soldier Drawing">
+        </div>
+        
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+      </section>
 
+      <sub>
+        <p id ="Skills">My Skills</p>
+      </sub>
 
+      <section class="mid">
+        <img src="./public/skillban.svg" alt="Skills Banner" style="width:500;height:250px;">
+      </section>
+      
+      
+      <link href="contact-form.css" rel="stylesheet">
+      <section class="midd">
+        
+        <div id ="Contact" class="fcf-body">
+        
+            <div id="fcf-form">
+            <h3 class="fcf-h3"> <a href= "mailto:Merciful.bolaji@gmail.com?subject = Feedback&body = Message">
+               Contact Me! ✉️ | Merciful.bolaji@gmail.com |</a></h3>
+        
+            <form action="https://formsubmit.co/92b201aa48b07e76b10bb730cccd76ce" method="POST">
+                
+                <div class="fcf-form-group">
+                    <label for="Name" class="fcf-label">Your name</label>
+                    <div class="fcf-input-group">
+                        <input type="text" id="Name" name="Name" class="fcf-form-control" required>
+                    </div>
+                </div>
+        
+                <div class="fcf-form-group">
+                    <label for="Email" class="fcf-label">Your email address</label>
+                    <div class="fcf-input-group">
+                        <input type="email" id="Email" name="Email" class="fcf-form-control" required>
+                    </div>
+                </div>
+        
+                <div class="fcf-form-group">
+                    <label for="Message" class="fcf-label">Your message</label>
+                    <div class="fcf-input-group">
+                        <textarea id="Message" name="Message" class="fcf-form-control" rows="6" maxlength="3000" required></textarea>
+                    </div>
+                </div>
+        
+                <div class="fcf-form-group">
+                  <button type="submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Send Message</button>
+                </div>
+        
+            </form>
+            </div>
+          
+        </div>
+      </section>
+    </main>
 
-
-
-
-
-
-
-
-
-
-
+    
+    <script src="./main.js" type="module"></script>
+    <button class="scrollToTopBtn"><img src="./public/UpArrow.svg" alt="👆" style="width:35px;height:35px;"></button>
   </body>
+  
+
 </html>
