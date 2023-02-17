@@ -1,0 +1,5 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+  # Add this line to tell Vite to include style.css
+  rollupOptions.input = ["index.html", "style.css"]
