@@ -1,4 +1,218 @@
-@import url("https://use.typekit.net/jmk3xov.css");
+html{
+  scroll-behavior: smooth;;
+}
+/*Light Switch*/
+.toggle {
+  position: relative;
+}
+
+.toggle input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle .onoff {
+  color: #fff;
+  font-size: 0px;
+  text-align: left;
+  display: block;
+}
+
+.slider {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  background-color: #333;
+  transition: 0.4s;
+  width: 30px;
+  height: 20px;
+  top: 15px;
+  left: -40px;
+}
+
+.slider:before {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  background-color: #fff;
+  transition: 0.4s;
+  top: 0px;
+  left: 0px;
+}
+
+input:checked + .slider {
+  background-color: #fd5d00;
+  box-shadow: 0 0 12px #fd5d00;
+}
+
+input:checked + .slider:before {
+  transform: translateX(8px);
+}
+
+.slider.round {
+  border-radius: 10px;
+}
+.slider.round::before {
+  border-radius: 10px;
+}
+
+
+/*Scroll Button*/
+
+.scrollToTopBtn {
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 30px;
+  line-height: 25px;
+  width: 48px;
+
+  /* place it at the bottom right corner */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  /* keep it at the top of everything else */
+  z-index: 100;
+  /* hide with opacity */
+  opacity: 0;
+  /* also add a translate effect */
+  transform: translateY(100px);
+  /* and a transition */
+  transition: all 0.5s ease;
+}
+
+.scrollToTopBtn:hover {
+  transition: 0.2s;
+  transform: scale(1.2);
+  }
+
+.showBtn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* Create a sticky/fixed navbar */
+#navbar {
+  overflow: hidden;
+  background-color: rgba(14, 14, 14, 0.652);
+  padding: 10px -6px; /* Large padding which will shrink on scroll (using JS) */
+  transition: 0.4s; /* Adds a transition effect when the padding is decreased */
+  position: fixed; /* Sticky/fixed navbar */
+  width: 90%;
+  top: 0; /* At the top */
+  left: 0;
+  z-index: 100;
+  border-radius: 25px;
+  backdrop-filter: blur(10px);
+}
+
+/* Style the navbar links */
+#navbar a {
+  float: left;
+  color: rgb(95, 95, 95);
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 10px;
+  
+}
+
+/* Style the logo */
+#navbar #logo {
+  padding: 5px ;
+  font-size: 30px;
+  font-family: brandon-grotesque, sans-serif;
+  transition: 0.4s;
+  margin: auto;
+  border-radius: 30px;
+  margin-left: 0px;
+  margin-top: 0px;
+}
+
+#navbar #logo a {
+  color: black;
+  text-decoration: none;
+}
+
+#navbar #logo:hover {
+  /*background-color: rgba(241, 240, 240, 0.792);*/
+  text-decoration: underline;
+}
+
+/* Links on mouse-over */
+#navbar a:not(#navbar #logo):hover {
+  /*background-color: rgba(255, 255, 255, 0.668);*/
+  color: rgba(255, 253, 253, 0.852);
+  transition: 0.2s;
+}
+
+/* Style the active/current link */
+#navbar a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+/* Display some links to the right */
+#navbar-right {
+  float: right;
+}
+
+
+/* Add responsiveness - on screens less than 580px wide, display the navbar vertically instead of horizontally */
+@media screen and (max-width: 580px) {
+  
+  #navbar {
+    padding: 20px 10px !important; /* Use !important to make sure that JavaScript doesn't override the padding on small screens */
+  }
+  #navbar a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  #navbar-right {
+    float: none;
+  }
+  .toggle {
+    float: none;
+    display: block;
+  }
+  .slider {
+    float: none;
+    display: block;
+    }
+}
+
+
+a:link {
+  color: #0479ee;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(0, 187, 255);
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: rgb(255, 136, 0);
+  background-color: transparent;
+  text-decoration: underline;
+}
 
 canvas {
   position: fixed;
@@ -6,16 +220,16 @@ canvas {
   left: 0;
 }
 
-
 :root {
-  --dark-bg: rgba(15, 15, 15, 0.95);
+  --dark-bg: rgba(0, 0, 0, 0.592);
+  --d-bg: rgba(15, 15, 15, 0.473);
+  --light-bg: rgba(255, 255, 255, 0.123);
   --spacing: 350px;
 
   font-family: brandon-grotesque, sans-serif;
   font-weight: 400;
   font-style: normal;
 }
-
 
 main {
   width: 100vw;
@@ -31,9 +245,10 @@ main {
 }
 
 h1, h2, h3, blockquote {
-  font-family: elevon, sans-serif;
-  font-weight: 700;
+  font-family: sans-serif, veranda;
+  font-weight: 600;
   font-style: normal;
+  
 }
 
 canvas {
@@ -42,23 +257,26 @@ canvas {
   left: 0;
 }
 
-
-
   header {
     background: var(--dark-bg);
     grid-column: 2 / span 5;
-    font-size: 2.5rem;
+    font-size: 2.1rem;
     padding: 2rem;
-    margin-bottom: var(--spacing);
+    margin-bottom: 0;
+    border-radius: 30px;
   }
+  
 
   section {
+    backdrop-filter: blur(5px);
     grid-column: 2 / 8;
     padding: 1rem;
     background: var(--dark-bg);
     font-size: 1.25rem;
     line-height: 1.5;
-    margin-bottom: var(--spacing);
+    margin-top: 200px;
+    margin-bottom: 10px;
+    border-radius: 20px
   }
 
   blockquote {
@@ -76,6 +294,224 @@ canvas {
     line-height: 1;
   }
 
-  .left {
-    grid-column: 6 / 12;
+  sub {
+    margin: 500px;
+    padding: 0;
+    grid-column: 2 / span 12;
+    margin-bottom: 0;
+    margin-top: 10px;
   }
+  sub p {
+    color: white;
+    font-size: 3rem;
+    display: inline;
+    line-height: 1;
+  }
+
+  .lleft {
+    grid-column: 6 / 12;
+    margin-bottom: 10px;
+  }
+
+  .mid {
+    grid-column: 2 / 12;
+    padding: 1rem;
+    background: var(--dark-bg);
+    font-size: 1.25rem;
+    line-height: 1.5;
+    margin-top: 10px;
+    margin-bottom: 100px;
+  }
+
+  .midd {
+    grid-column: 6 / 12;
+    padding: 1rem;
+    background: var(--dark-bg);
+    font-size: 1.25rem;
+    line-height: 1.5;
+    margin-top: 10px;
+    margin-bottom: 100px;
+  }
+  .gal {
+    grid-column: 2 / 12;
+    padding: 1rem;
+    height: 1200px;
+    background: var(--dark-bg);
+    font-size: 1.25rem;
+    line-height: 1.5;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    margin-left: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgba(0, 0, 0, 0.712);
+  }
+
+  .nobg {
+    position: absolute;
+    top: 1.5%;
+    width: 100%;
+    height: 300px;
+    background-color: rgba(0, 0, 0, 0);
+    grid-column: 8 / 12;
+    text-align: center;
+    padding: 0rem;
+}
+
+#my-#boylaptop {
+  transition: opacity 0.1s ease;
+  opacity: 1;
+}
+
+  .cursor {
+    animation: blink 1s linear infinite;
+}
+
+@keyframes blink {
+    0% {opacity: 1;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+/*Loading Screen*/
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#loading-bar {
+  width: 50%;
+  height: 10px;
+  background-color: #59dfdf;
+  animation: loading-bar 2s linear infinite;
+}
+
+@keyframes loading-bar {
+  from { width: 0% }
+  to { width: 100% }
+}
+
+#loading-image {
+  position: relative; /* This sets the image as a relative positioned element */
+  top: -20px; /* This moves the image 20px up from its current position */
+  width: 100px;
+  height: 100px;
+  animation: loading-image 2s linear infinite;
+}
+
+
+@keyframes loading-image {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+/*ART GALLERY PIECES*/
+
+.art_image {
+  perspective: 3000px;
+  position: absolute;
+  width: 20%;
+  left: 30%;
+  top:89%;
+  transform: translate(-50%, -50%);
+  transform-style: preserve-3d;
+}
+.art_image_1 {
+  width: 20%;
+  left: 200px;
+  top: 1030px;
+}
+.art_image_2 {
+  width: 25%;
+  left: 350px;
+  top: 1030px;
+}
+.art_image_3 {
+  left: 580px;
+  width: 40%;
+  top: 1030px;
+}
+
+.art_image img {
+transform: rotateX(70deg) rotateZ(-60deg) translate3d(-120px, 0px, 70px);
+box-shadow: -80px 60px 15px 5px rgba(100, 100, 100, 0.14);
+transition: all .4s;
+transform-style: preserve-3d;
+pointer-events: none;
+}
+.art_image:hover img {
+  transform: rotateX(0deg) rotateZ(0deg) translate3d(0px, 0px, 0px);
+  box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.0);
+}
+.art_image_1:hover img {
+  transform: rotateX(0deg) rotateZ(0deg) translate3d(-70px, 0px, 0px);
+}
+.art_image_2:hover img {
+  transform: rotateX(0deg) rotateZ(0deg) translate3d(-40px, 0px, 0px);
+}
+.art_image.selected {
+  transform: rotateX(0deg) rotateZ(0deg) translate3d(-70px, 0px, 0px);
+}
+
+.art_image:hover {
+  cursor: pointer;
+  z-index: 1;
+}
+.art_image:not(:hover) {
+  z-index: 0;
+}
+
+/*New dynnnnnnnnnnnnnamic*/
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+@media only screen and (min-width: 600px) {
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+
+@media only screen and (min-width: 768px) {
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
