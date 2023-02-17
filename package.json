@@ -13,3 +13,23 @@
     "three": "^0.128.0"
   }
 }
+  "vite": {
+    "build": {
+      "rollupOptions": {
+        "input": ["index.html"],
+        "output": {
+          "entryFileNames": "[name].js",
+          "assetFileNames": "[name][extname]"
+        },
+        "plugins": [
+          {
+            "name": "include-style",
+            "transformIndexHtml": {
+              "hook": "buildEnd",
+              "fn": "(html) => html.replace(/<head>/, '<head>\\n<style>' + fs.readFileSync('src/style.css', 'utf-8') + '</style>')"
+            }
+          }
+        ]
+      }
+    }
+  }
