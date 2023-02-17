@@ -28,6 +28,10 @@ ID = "eclectic-piroshki-bfc783"
     pretty_urls = true
   [build.processing.images]
     compress = true
+  [build]
+  command = "npm run build"
+  publish = "dist"
+
 
 # Set enviroment variable prompts for templates
 [template.environment]
