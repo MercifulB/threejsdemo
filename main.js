@@ -63,12 +63,12 @@ function addStar() {
 
 Array(200).fill().forEach(addStar)
 
-const spaceTexture = new THREE.TextureLoader().load('./public/s.png');
+const spaceTexture = new THREE.TextureLoader().load('s.png');
 scene.background = spaceTexture;
 
 //cube
 
-const nigTexture = new THREE.TextureLoader().load('./public/wh pro.png');
+const nigTexture = new THREE.TextureLoader().load('wh pro.png');
 
 const nig = new THREE.Mesh(
   new THREE.BoxBufferGeometry(3, 3, 3, 10, 10, 10),
@@ -76,7 +76,7 @@ const nig = new THREE.Mesh(
 );
 
 // My logo
-const circleTexture = new THREE.TextureLoader().load('./public/Icon.svg');
+const circleTexture = new THREE.TextureLoader().load('Icon.svg');
 
 const circle = new THREE.Mesh(
   new THREE.CircleGeometry(8,100),
@@ -87,7 +87,7 @@ circle.position.x = -60;
 circle.position.y = 30;
 
 // Microscope Orthographic
-const orthTexture = new THREE.TextureLoader().load('./public/microortho.png');
+const orthTexture = new THREE.TextureLoader().load('microortho.png');
 
 const orth = new THREE.Mesh(
   new THREE.PlaneGeometry(4,4),
@@ -102,8 +102,8 @@ scene.add(nig, circle);
 
 // World
 
-const worldTexture = new THREE.TextureLoader().load('./public/map2.jpg');
-const normalTexture = new THREE.TextureLoader().load('./public/mars.png');
+const worldTexture = new THREE.TextureLoader().load('map2.jpg');
+const normalTexture = new THREE.TextureLoader().load('mars.png');
 
 
 const world = new THREE.Mesh(
@@ -143,7 +143,7 @@ gltfLoader.load('siteHover.gltf', (gltfScene)=>{
 */
 // Microscope
 
-gltfLoader.load('./public/microscope.gltf', (gltfScene)=>{
+gltfLoader.load('.microscope.gltf', (gltfScene)=>{
   //loadedModel = gltfScene;
   //gltfScene.scene.rotation.y = Math.PI / 8;
   gltfScene.scene.position.y = 0;
@@ -290,7 +290,7 @@ toggle.addEventListener('click', () => {
 })
 
 // Hovercraft Image changes
-const hov_images = ["./public/hovpic.png", "./public/hovpic2.png", "./public/Hover_Vid.mp4"];
+const hov_images = ["hovpic.png", "hovpic2.png", "Hover_Vid.mp4"];
 let hov_currentImage = 0;
 
 function changeHImage() {
@@ -304,7 +304,7 @@ hov_image.addEventListener("click", changeHImage);
 
 
 // Scratch Image changes
-const simages = ["./public/sp-game.png", "b./public/ox-game.png", "./public/2020-sf.PNG"];
+const simages = ["sp-game.png", "box-game.png", "2020-sf.PNG"];
 let scurrentImage = 0;
 
 function changeSImage() {
@@ -317,7 +317,7 @@ const simage = document.getElementById("scratchImages");
 simage.addEventListener("click", changeSImage);
 
 // Traffic Image changes
-const images = ["./public/traffic.png", "./public/traffic2.PNG", "./public/traffic3.PNG"];
+const images = ["traffic.png", "traffic2.PNG", "traffic3.PNG"];
 let currentImage = 0;
 
 function changeImage() {
